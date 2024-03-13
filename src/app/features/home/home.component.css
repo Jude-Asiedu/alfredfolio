@@ -1,3 +1,25 @@
 .min-vh-95 {
     height: 95vh;
 }
+.major{
+  height: 100vh;
+  scroll-snap-align:center;
+  /* display:flex;
+  justify-content:center; */
+}
+
+.major-textonly{
+  height: 70vh;
+  scroll-snap-align:center;
+}
+.prarent{
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  scroll-behavior:smooth;
+  overflow-y:auto;
+  scrollbar-width: none;
+  /* color:white; */
+  &::-webkit-scrollbar{
+    display:none;
+  }
+}
