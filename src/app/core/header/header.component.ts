@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
   bio$ = this.bioService.getBio();
   isHome$ = this.headerService.isHome();
   menuItems = [
-    { title: 'About', homePath: '/', fragment: 'about', pagePath: '/about' },
+    { title: 'About', homePath: '/about', fragment: 'about', pagePath: '/about' },
     { title: 'My Projects', homePath: '/projects', fragment: '', pagePath: '/projects' },
     { title: 'My Blog', homePath: '/blog', fragment: '', pagePath: '/blog' }
   ];

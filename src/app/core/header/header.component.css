@@ -8,6 +8,9 @@
   backdrop-filter: blur(4.5px);
 }
 
+.dropdown-item::after{
+  display: none;
+}
 /*primary: #2c698d
  secondary : #bae8e8
  seconda-primary : #272643

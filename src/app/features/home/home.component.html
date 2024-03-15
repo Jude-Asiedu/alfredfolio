@@ -59,7 +59,7 @@
       </div>
     </div>
     <div class="professional  bg-second">
-      <div class="row mb-5 mx-4 ">
+      <div class="row mb-5 mx-4 pt-5 ">
         <h4 class="text-center textMain my-5 display-5  pt-5 fw-bolder">Professional Experience </h4>
         <div class="col-md-9 mx-auto my-3">
           <div class="card bg-second card-hover shadow-0 border-0  rounded-2 mx-4 text-white ">
@@ -135,32 +135,28 @@
     </div>
     <div class="major">
       <div class="container">
-        <div class="card border-0 py-5">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Consectetur cum in assumenda molestiae nostrum vitae, voluptate labore esse nam iusto ut impedit ad, velit eos
-          consectetur vitae. Quasi labore ipsam nostrum, quas architecto eligendi ullam pariatur nemo adipisci minus,
-          tempore quo amet! Quis mollitia consequuntur provident? Voluptatum, amet. Sint fugit dicta quidem id nisi rerum
-          placeat excepturi cum, nulla odit minima tempora a labore. Enim nobis voluptatem minus voluptates nesciunt vero
-          aperiam dolorem commodi beatae?
-        </div>
+      <app-projects></app-projects>
     </div>
     </div>
     <div class="major bg-second  text-white" #about>
       <h4 class="text-center textMain pt-5 display-6 fw-bolder">About Me </h4>
         <div class="row mt-5 ">
-          <div class="col-md-7 mt-5 pt-3" *ngIf="bio$ | async as bio">
+          <div class="col-md-7 col-sm-12 mt-5 pt-3" *ngIf="bio$ | async as bio">
             <div *ngFor="let par of bio.about">
-              <p class="text-end ps-5 fs-6">{{par}}</p>
+              <p class="text-md-end text-center ps-md-5 p-4  fs-6">{{par}}</p>
             </div>
           </div>
-          
+          <div class="col-md-5">
+            <img src="" alt="">
+          </div>
+
         </div>
     </div>
     <div class="containex">
       <div class="row my-5 px-5 pt-5 d-flex align-items-center">
         <h4 class="text-center  display-5 mt-5 pt-5 fw-bolder">Contact  Me </h4>
-        <div class="col-md-8  mx-auto mt-0 pt-0">
-            <p class="text-center ps-5 fs-6 mt-5">
+        <div class=" col-lg-8 col-md-11 col-sm-12  mx-md-auto mt-0 pt-0">
+            <p class="text-center  fs-6 mt-5">
               If you like my work or want to hire me, please feel free to shoot me an email on
               <b> jude.asiedu99@gmail.com</b> by pressing the button below.
             </p>
