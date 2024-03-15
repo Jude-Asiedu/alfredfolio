@@ -2,3 +2,22 @@
 .cursor-pointer{
   cursor: pointer;
 }
+.bg-second{
+  background-color:#272643 ;
+}
+.bg-tertiary{
+  background-color: #ffffff;
+}
+.card-hover{
+  transition: all 0.25s ease;
+}
+
+.card-hover:hover{
+  background-color: #333159a8;
+  border-color: rgba(34, 139, 174, 0.442) ;
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.2);
+}
+.textMain{
+ color: #bae8e8;
+
+}

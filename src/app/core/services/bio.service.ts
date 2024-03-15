@@ -13,8 +13,6 @@ export interface Bio{
 export class BioService {
 
   constructor(private http:HttpClient) { 
-    console.log(this.getBio());
-    
   }
   getBio() {
     return this.http.get<Bio>('assets/json/bio.json');

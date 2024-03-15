@@ -1,0 +1,16 @@
+.header {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 50;
+  background-color: #255f8052;
+  backdrop-filter: blur(4.5px);
+}
+
+/*primary: #2c698d
+ secondary : #bae8e8
+ seconda-primary : #272643
+ secdon-secondary: #e3f6f5
+*/
+

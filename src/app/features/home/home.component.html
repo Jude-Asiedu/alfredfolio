@@ -1,188 +1,186 @@
-<div class="prarent">
-  <div class="d-flex flex-column justify-content-center align-items-center major w-100  " *ngIf="bio$ | async as bio">
-    <div class="d-flex flex-column min-vh-95 justify-content-center align-items-center w-100">
-      <div *ngFor="let options of respOptions" [ngClass]="options.viewClasses"
-        class="flex-column justify-content-center align-items-start w-75">
-        <h1 [ngClass]="options.headingClass" class="text-left">Hello, 👋. My name is <span
-            class="font-weight-bold">{{bio.firstName+''+bio.lastName}}.</span></h1>
-        <div *ngFor="let par of bio.intro">
-          <h2 class="text-left" *ngIf="!options.useSmallerHeadings">{{par}}</h2>
-          <h5 class="text-left" *ngIf="options.useSmallerHeadings">{{par}}</h5>
+<div class="topClass">
+    <div class="containex row  d-flex  flex-column justify-content-center align-items-center   bg-tertiary "
+      *ngIf="bio$ | async as bio">
+      <div class="d-flex flex-column  justify-content-center align-items-center ">
+        <div *ngFor="let options of respOptions" [ngClass]="options.viewClasses"
+          class="flex-column justify-content-center align-items-center w-75">
+          <h1 [ngClass]="options.headingClass"
+          class="text-center display-1">Hello, 👋 <br> <span
+              class="fw-bold textMain mt-4 pt-4">{{bio.firstName+' '+bio.lastName}}</span></h1>
+          <h6 class="fw-light fs-6"> Full Stack Developer | Jovial JS Polygot</h6>
+          <button class="mt-3 my-5 btn btn-dark rounded-0 px-5 py-3" routerLink="/works">
+            See My Works <i class="ml-1 fas fa-angle-right"></i>
+          </button>
         </div>
-        <button class="mt-3 mb-5 btn btn-outline-info" routerLink="/" fragment="projects">
-          See My Work
-          <i class="ml-1 fas fa-angle-right"></i>
-        </button>
       </div>
     </div>
-
-
-    <!-- <app-about id="about" class="mb-3"></app-about> -->
-
-    <div class="d-none d-md-block mt-5"></div>
-    <!-- <app-projects id="projects" class="mb-5"></app-projects> -->
-  </div>
-
-  <div class="major-textonly text-info  ">
-    <div class="row bg-dark ps-5 my-5">
-      <div class="col-6 ps-5 d-flex flex-column align-items-stretch justify-content-center ">
-        <h3 class="my-4 py-3 fw-bolder display-1">Be ready.</h3>
-        <h3 class="my-4 py-3 fw-bolder display-1">Be cool.</h3>
-        <h3 class="my-4 py-3 fw-bolder display-1">Be vigilante.</h3>
-      </div>
-      <div class="col-6 p-0">
-        <img class="img-fluid animate-bounce w-100 h-100"
-          src="https://images.freeimages.com/image/previews/cb6/sunshine-ornament-png-5690546.png?fmt=webp&h=350"
-          alt="">
+    <div class="major bg-second">
+      <div class="row  mb-5 px-5">
+        <h4 class="text-center textMain my-5 display-5 fw-bolder">Skills </h4>
+        <div class="col-md-6 my-2 ">
+          <div class="card  skillCard  rounded-2 mx-4 text-white shadow">
+            <div class="card-body">
+              <h6 class="fw-bold text-center mb-3">Web Development</h6>
+              <p class="fs-7 fw-light mt-4">
+                <small>
+                  Building websites with 1.2 years of experience. Skilled in Next.js, React, Node.js, HTML, CSS, Material
+                  UI, Tailwind CSS
+                </small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 my-2">
+          <div class="card skillCard  rounded-2 mx-4 text-white shadow">
+            <div class="card-body">
+              <h6 class="fw-bold text-center mb-3">Mobile Development</h6>
+              <p class="fs-6 fw-light mt-4">
+                <small>
+                  Building mobile applications with 4 months of experience. Skilled in Ionic, Xamarin, C#, HTML, CSS,
+                  Flutter, Tailwind CSS
+                </small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 my-2">
+          <div class="card skillCard  rounded-2 mx-4 text-white shadow">
+            <div class="card-body">
+              <h6 class="fw-bold text-center mb-3">UX/UI Development</h6>
+              <p class="fs-6 fw-light mt-4">
+                <small>
+                  Building mobile applications with 4 months of experience. Skilled in Ionic, Xamarin, C#, HTML, CSS,
+                  Flutter, Tailwind CSS
+                </small>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="major text-primary">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut recusandae, necessitatibus dicta eligendi blanditiis
-    vero consectetur dolor autem ex maxime assumenda asperiores quam. Illum obcaecati possimus at quia! Maxime quibusdam
-    similique ex doloribus neque, dolore, labore aliquid assumenda blanditiis nihil delectus. Qui beatae porro aperiam
-    explicabo et, voluptas ea deserunt accusantium minus eum, animi, dolorum similique! Quo incidunt debitis repudiandae
-    cumque corrupti quas assumenda ipsam dicta, possimus quisquam, deleniti reprehenderit nemo similique! Dolores ullam
-    quis nulla modi obcaecati at non, eligendi minus, doloribus repellat fuga veritatis odit hic illo sapiente expedita
-    molestias ipsa velit eius. Unde eum itaque, enim voluptas deserunt consequatur quia in officia perferendis aperiam
-    iusto et earum dolore, eaque alias explicabo, nemo quisquam vitae excepturi fugit ipsa libero praesentium corrupti.
-    Eaque asperiores quae deserunt deleniti, quasi officia dignissimos corporis a quibusdam fugiat non voluptates,
-    commodi, soluta sit aspernatur modi cum voluptatem quos. Atque maiores facere totam ad similique dicta alias
-    molestias esse unde modi aperiam minus numquam impedit, eius facilis necessitatibus aliquid error repellendus porro
-    delectus animi beatae sit obcaecati! Excepturi ratione unde accusamus praesentium atque fugiat nulla suscipit
-    voluptatem laboriosam nemo? Minus architecto quaerat minima error, ipsam fugit aspernatur fugiat inventore. Qui
-    suscipit pariatur corporis iure necessitatibus tempore, harum laboriosam consequuntur est soluta, eos reiciendis
-    accusantium quidem, animi ipsam magnam. Animi accusamus ipsa modi in cupiditate labore. Tempore neque voluptas totam
-    facilis placeat veritatis quos iure laboriosam blanditiis culpa facere consequatur magnam dolore eligendi delectus
-    provident, qui aliquam voluptatum a asperiores quae? Omnis nisi voluptate consectetur soluta dolores ipsum
-    distinctio nihil explicabo, recusandae possimus fugit perferendis nesciunt blanditiis eligendi alias quisquam
-    numquam. Error doloribus dolores expedita tempora praesentium similique consequuntur dolorum veritatis. Aliquam qui
-    veniam ducimus facilis odio fugiat. Quae reprehenderit consequuntur assumenda magnam minima perferendis molestias
-    ipsum dicta autem, aperiam voluptatem repellat vero! Adipisci voluptate magnam non deleniti esse eveniet vitae
-    maiores, culpa debitis id reiciendis dolore, est expedita repellat accusamus consequatur, perferendis in nemo
-    tempore quasi. Eaque inventore delectus vitae aperiam, facilis fuga tenetur? Minus quaerat, consequatur non magni,
-    beatae laudantium eos ipsum impedit adipisci porro illo alias nobis tenetur reiciendis ab quasi nam doloremque
-    consectetur asperiores quisquam aliquid enim. Reprehenderit numquam, nostrum voluptatum, delectus omnis quos
-    similique atque assumenda doloribus itaque, dicta qui harum corporis error molestiae quae molestias expedita aliquid
-    quasi ipsum. Iure nihil consectetur earum repellendus, quas nulla vel in a corporis, voluptatum consequatur expedita
-    asperiores corrupti eius quam eos id qui minus voluptatibus soluta fugiat dolorum molestias eligendi! Amet omnis
-    quos iste nesciunt a, sit porro beatae. Dolores sed reiciendis fuga laboriosam officia inventore ut, deserunt
-    consequuntur sit ipsa obcaecati similique amet sint nisi saepe, ex qui molestiae eveniet unde expedita perferendis!
-    Nesciunt maxime, eum asperiores similique aliquid voluptate consequuntur blanditiis. Voluptatibus repudiandae, cum
-    aliquid voluptates asperiores atque praesentium quae harum quam recusandae inventore impedit possimus ipsam? Amet
-    eum nulla eius omnis architecto consectetur magni ad, possimus harum nemo tempore, laborum quas temporibus dolores!
-    Placeat ut nostrum deleniti voluptatem fugit rem rerum laborum. Tenetur placeat, obcaecati esse delectus fugit quas
-    vel expedita atque! Ut voluptate voluptas nostrum quod aliquam eveniet quas, repellendus perferendis? Officiis
-    corporis quis dolor similique qui architecto culpa neque consequuntur exercitationem! Expedita architecto ea unde
-    nam dolorem assumenda a ratione deserunt ipsa vitae ipsam culpa, maxime perspiciatis cumque et consectetur! Quidem
-    sit doloribus, vel fugiat dicta earum magnam asperiores iure voluptate ex impedit incidunt nam molestias optio velit
-    eligendi eaque culpa vitae harum deleniti? Cupiditate quibusdam nisi illo architecto, quasi nemo nostrum quis,
-    praesentium sunt sed consequuntur impedit vitae voluptates ipsum pariatur ad et ipsam aperiam. Laborum,
-    exercitationem perferendis repellat fugit delectus recusandae cumque unde expedita ipsum itaque, culpa rerum. Fugit
-    praesentium non vel expedita velit recusandae vitae assumenda repudiandae nobis veniam? Eum voluptate incidunt,
-    distinctio tempora eligendi nulla esse, ipsa provident beatae numquam deserunt quod reiciendis alias quas magnam
-    facilis? Numquam aliquam id et harum debitis, commodi nam. Totam animi quisquam dicta repellat exercitationem vitae,
-    incidunt laudantium rem deleniti est. A ipsum doloremque quia aut ratione, nihil voluptates quasi deserunt veritatis
-    explicabo assumenda dolores praesentium et quas natus dolor doloribus, magni officiis ipsam. Quasi totam eum magni
-    iure cupiditate consequatur, doloremque ratione accusamus beatae ducimus eveniet sunt, tempora aliquam in. Nobis
-    expedita voluptates dignissimos, eum soluta inventore ad saepe repellendus eveniet cumque possimus quas sunt sint
-    molestiae enim assumenda esse fugit illo odio, modi at eligendi ab facere? Ipsum repellendus at animi excepturi cum,
-    necessitatibus magni tempore tempora officia obcaecati placeat suscipit porro delectus. Magni blanditiis ea odio
-    enim non beatae voluptate ex quas voluptas quia fugit tempore quos animi, corporis sint? Qui earum aspernatur
-    doloremque ullam consequuntur, quaerat eaque neque asperiores laboriosam. Nemo quod fugiat, consequuntur omnis
-    temporibus commodi aperiam dignissimos totam debitis sapiente eos earum doloribus veniam itaque neque possimus
-    laudantium soluta tempora sunt. Voluptates at similique nihil ratione ipsam laudantium dolorum voluptas expedita
-    necessitatibus reiciendis, dolor corrupti quasi quisquam assumenda iste sit molestiae beatae. Repellendus obcaecati
-    corporis commodi esse tenetur consectetur voluptatibus laborum! Consectetur cum in assumenda molestiae nostrum
-    vitae, voluptate labore esse nam iusto ut impedit ad, velit eos commodi est expedita, exercitationem alias quae qui
-    reiciendis excepturi voluptatum. Alias sapiente ut nulla, quod non suscipit facere. Ipsam fuga voluptas dicta
-    voluptatum voluptatem perspiciatis deserunt similique obcaecati nihil iure necessitatibus cupiditate eaque, quia
-    praesentium, libero ratione velit repudiandae deleniti eveniet maxime sed reiciendis? Quisquam aliquam totam
-    molestias omnis. Nihil molestias consequuntur quibusdam, animi dolore minus consectetur atque eius dicta facilis.
-    Accusamus quasi nulla deleniti quisquam eaque, nam atque nemo? Veritatis ipsa dolorum modi iusto tempora repellat
-    asperiores, quia minima voluptates rerum temporibus laudantium doloribus cumque, ducimus nemo hic. Quia fugit
-    tempore sed eum corrupti blanditiis recusandae nulla, doloribus ratione velit quas alias aliquid dicta
-    exercitationem cum cupiditate porro officiis deserunt culpa neque consectetur vitae. Quasi labore ipsam nostrum,
-    quas architecto eligendi ullam pariatur nemo adipisci minus, tempore quo amet! Quis mollitia consequuntur provident?
-    Voluptatum, amet. Sint fugit dicta quidem id nisi rerum placeat excepturi cum, nulla odit minima tempora a labore.
-    Enim nobis voluptatem minus voluptates nesciunt vero aperiam dolorem commodi beatae?
-  </div>
+    <div class="professional  bg-second">
+      <div class="row mb-5 mx-4 ">
+        <h4 class="text-center textMain my-5 display-5  pt-5 fw-bolder">Professional Experience </h4>
+        <div class="col-md-9 mx-auto my-3">
+          <div class="card bg-second card-hover shadow-0 border-0  rounded-2 mx-4 text-white ">
+            <div class="card-body p-5">
+              <div class="row">
+                <div class="col-md-4 fw-lighter text-secondary fs-7">
+                <p class="mb-0 fs-7">  OCTOBER 2022  - PRESENT </p>
+                <p><small class="fs-7" > FULL TIME </small></p>
+                </div>
+                <div class="col-md-8">
+                  <h5 class="fw-normal mb-1">Front-End Development</h5>
+                  <a href="/itconsortiumgh.com" class="textMain  mt-0 cursor-pointer fw-light" target="_blank" style="text-decoration: none;font-size:12px;"> IT Consortium</a>
 
-  <div class="major text-danger">
-    <div class="card">
+                  <div class=" d-flex mt-2">
+                    <span class="badge me-1 rounded-1 p-2 border border-danger badge-info">HTML</span>
+                    <span class="badge me-1 rounded-1 p-2 border border-info badge-dark">Typescript</span>
+                    <span class="badge me-1 rounded-1 p-2 border border-warning badge-danger">PHP</span>
+                    <span class="badge me-1 rounded-1 p-2 border border-success badge-success">Laravel</span>
+                  </div>
+                  <p class="fs-6 fw-lighter mt-4">
+                    <small class="fs-6" >
+                      Built mobile applications with 4 months of experience. Skilled in Ionic, Xamarin, C#, HTML, CSS,
+                      Flutter, Tailwind CSS
+                    </small>
+                  </p>
+                  <p class="fs-6 fw-lighter mt-4">
+                    <small class="fs-6" >
+                      Built mobile applications with 8 months of experience. Skilled in Ionic, Xamarin, C#, HTML, CSS,
+                      Flutter, Tailwind CSS
+                    </small>
+                  </p>
+                </div>
+              </div>
 
-      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut recusandae, necessitatibus dicta eligendi blanditiis
-      vero consectetur dolor autem ex maxime assumenda asperiores quam. Illum obcaecati possimus at quia! Maxime
-      quibusdam similique ex doloribus neque, dolore, labore aliquid assumenda blanditiis nihil delectus. Qui beatae
-      porro aperiam explicabo et, voluptas ea deserunt accusantium minus eum, animi, dolorum similique! Quo incidunt
-      debitis repudiandae cumque corrupti quas assumenda ipsam dicta, possimus quisquam, deleniti reprehenderit nemo
-      similique! Dolores ullam quis nulla modi obcaecati at non, eligendi minus, doloribus repellat fuga veritatis odit
-      hic illo sapiente expedita molestias ipsa velit eius. Unde eum itaque, enim voluptas deserunt consequatur quia in
-      officia perferendis aperiam iusto et earum dolore, eaque alias explicabo, nemo quisquam vitae excepturi fugit ipsa
-      libero praesentium corrupti. Eaque asperiores quae deserunt deleniti, quasi officia dignissimos corporis a
-      quibusdam fugiat non voluptates, commodi, soluta sit aspernatur modi cum voluptatem quos. Atque maiores facere
-      totam ad similique dicta alias molestias esse unde modi aperiam minus numquam impedit, eius facilis necessitatibus
-      aliquid error repellendus porro delectus animi beatae sit obcaecati! Excepturi ratione unde accusamus praesentium
-      atque fugiat nulla suscipit voluptatem laboriosam nemo? Minus architecto quaerat minima error, ipsam fugit
-      aspernatur fugiat inventore. Qui suscipit pariatur corporis iure necessitatibus tempore, harum laboriosam
-      consequuntur est soluta, eos reiciendis accusantium quidem, animi ipsam magnam. Animi accusamus ipsa modi in
-      cupiditate labore. Tempore neque voluptas totam facilis placeat veritatis quos iure laboriosam blanditiis culpa
-      facere consequatur magnam dolore eligendi delectus provident, qui aliquam voluptatum a asperiores quae? Omnis nisi
-      voluptate consectetur soluta dolores ipsum distinctio nihil explicabo, recusandae possimus fugit perferendis
-      nesciunt blanditiis eligendi alias quisquam numquam. Error doloribus dolores expedita tempora praesentium
-      similique consequuntur dolorum veritatis. Aliquam qui veniam ducimus facilis odio fugiat. Quae reprehenderit
-      consequuntur assumenda magnam minima perferendis molestias ipsum dicta autem, aperiam voluptatem repellat vero!
-      Adipisci voluptate magnam non deleniti esse eveniet vitae maiores, culpa debitis id reiciendis dolore, est
-      expedita repellat accusamus consequatur, perferendis in nemo tempore quasi. Eaque inventore delectus vitae
-      aperiam, facilis fuga tenetur? Minus quaerat, consequatur non magni, beatae laudantium eos ipsum impedit adipisci
-      porro illo alias nobis tenetur reiciendis ab quasi nam doloremque consectetur asperiores quisquam aliquid enim.
-      Reprehenderit numquam, nostrum voluptatum, delectus omnis quos similique atque assumenda doloribus itaque, dicta
-      qui harum corporis error molestiae quae molestias expedita aliquid quasi ipsum. Iure nihil consectetur earum
-      repellendus, quas nulla vel in a corporis, voluptatum consequatur expedita asperiores corrupti eius quam eos id
-      qui minus voluptatibus soluta fugiat dolorum molestias eligendi! Amet omnis quos iste nesciunt a, sit porro
-      beatae. Dolores sed reiciendis fuga laboriosam officia inventore ut, deserunt consequuntur sit ipsa obcaecati
-      similique amet sint nisi saepe, ex qui molestiae eveniet unde expedita perferendis! Nesciunt maxime, eum
-      asperiores similique aliquid voluptate consequuntur blanditiis. Voluptatibus repudiandae, cum aliquid voluptates
-      asperiores atque praesentium quae harum quam recusandae inventore impedit possimus ipsam? Amet eum nulla eius
-      omnis architecto consectetur magni ad, possimus harum nemo tempore, laborum quas temporibus dolores! Placeat ut
-      nostrum deleniti voluptatem fugit rem rerum laborum. Tenetur placeat, obcaecati esse delectus fugit quas vel
-      expedita atque! Ut voluptate voluptas nostrum quod aliquam eveniet quas, repellendus perferendis? Officiis
-      corporis quis dolor similique qui architecto culpa neque consequuntur exercitationem! Expedita architecto ea unde
-      nam dolorem assumenda a ratione deserunt ipsa vitae ipsam culpa, maxime perspiciatis cumque et consectetur! Quidem
-      sit doloribus, vel fugiat dicta earum magnam asperiores iure voluptate ex impedit incidunt nam molestias optio
-      velit eligendi eaque culpa vitae harum deleniti? Cupiditate quibusdam nisi illo architecto, quasi nemo nostrum
-      quis, praesentium sunt sed consequuntur impedit vitae voluptates ipsum pariatur ad et ipsam aperiam. Laborum,
-      exercitationem perferendis repellat fugit delectus recusandae cumque unde expedita ipsum itaque, culpa rerum.
-      Fugit praesentium non vel expedita velit recusandae vitae assumenda repudiandae nobis veniam? Eum voluptate
-      incidunt, distinctio tempora eligendi nulla esse, ipsa provident beatae numquam deserunt quod reiciendis alias
-      quas magnam facilis? Numquam aliquam id et harum debitis, commodi nam. Totam animi quisquam dicta repellat
-      exercitationem vitae, incidunt laudantium rem deleniti est. A ipsum doloremque quia aut ratione, nihil voluptates
-      quasi deserunt veritatis explicabo assumenda dolores praesentium et quas natus dolor doloribus, magni officiis
-      ipsam. Quasi totam eum magni iure cupiditate consequatur, doloremque ratione accusamus beatae ducimus eveniet
-      sunt, tempora aliquam in. Nobis expedita voluptates dignissimos, eum soluta inventore ad saepe repellendus eveniet
-      cumque possimus quas sunt sint molestiae enim assumenda esse fugit illo odio, modi at eligendi ab facere? Ipsum
-      repellendus at animi excepturi cum, necessitatibus magni tempore tempora officia obcaecati placeat suscipit porro
-      delectus. Magni blanditiis ea odio enim non beatae voluptate ex quas voluptas quia fugit tempore quos animi,
-      corporis sint? Qui earum aspernatur doloremque ullam consequuntur, quaerat eaque neque asperiores laboriosam. Nemo
-      quod fugiat, consequuntur omnis temporibus commodi aperiam dignissimos totam debitis sapiente eos earum doloribus
-      veniam itaque neque possimus laudantium soluta tempora sunt. Voluptates at similique nihil ratione ipsam
-      laudantium dolorum voluptas expedita necessitatibus reiciendis, dolor corrupti quasi quisquam assumenda iste sit
-      molestiae beatae. Repellendus obcaecati corporis commodi esse tenetur consectetur voluptatibus laborum!
-      Consectetur cum in assumenda molestiae nostrum vitae, voluptate labore esse nam iusto ut impedit ad, velit eos
-      commodi est expedita, exercitationem alias quae qui reiciendis excepturi voluptatum. Alias sapiente ut nulla, quod
-      non suscipit facere. Ipsam fuga voluptas dicta voluptatum voluptatem perspiciatis deserunt similique obcaecati
-      nihil iure necessitatibus cupiditate eaque, quia praesentium, libero ratione velit repudiandae deleniti eveniet
-      maxime sed reiciendis? Quisquam aliquam totam molestias omnis. Nihil molestias consequuntur quibusdam, animi
-      dolore minus consectetur atque eius dicta facilis. Accusamus quasi nulla deleniti quisquam eaque, nam atque nemo?
-      Veritatis ipsa dolorum modi iusto tempora repellat asperiores, quia minima voluptates rerum temporibus laudantium
-      doloribus cumque, ducimus nemo hic. Quia fugit tempore sed eum corrupti blanditiis recusandae nulla, doloribus
-      ratione velit quas alias aliquid dicta exercitationem cum cupiditate porro officiis deserunt culpa neque
-      consectetur vitae. Quasi labore ipsam nostrum, quas architecto eligendi ullam pariatur nemo adipisci minus,
-      tempore quo amet! Quis mollitia consequuntur provident? Voluptatum, amet. Sint fugit dicta quidem id nisi rerum
-      placeat excepturi cum, nulla odit minima tempora a labore. Enim nobis voluptatem minus voluptates nesciunt vero
-      aperiam dolorem commodi beatae?
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9 mx-auto mt-3">
+          <div class="card bg-second card-hover shadow-0 border-0 rounded-2 mx-4 text-white ">
+            <div class="card-body p-5">
+              <div class="row">
+                <div class="col-md-4 fw-lighter text-secondary fs-7">
+                <p class="mb-0 fs-7">  JULY 2021  - SEPTEMBER 2021 </p>
+                <p><small class="fs-7" > INTERNSHIP </small></p>
+                </div>
+                <div class="col-md-8">
+                  <h5 class="fw-normal mb-1">IT Support </h5>
+                  <a href="https://bootstrapious.com/p/bootstrap-sidebar/itconsortiumgh.com" class="text-success  mt-0 cursor-pointer fw-light" target="_blank" style="text-decoration: none;font-size:12px;"> AGA Malaria Control</a>
+
+                  <div class=" d-flex mt-2">
+                    <span class="badge me-1 rounded-1 p-2 border border-danger badge-info">Work Management</span>
+                    <span class="badge me-1 rounded-1 p-2 border border-info badge-dark">Data Entry</span>
+                  </div>
+                  <p class="fs-6 fw-lighter mt-4">
+                    <small class="fs-6" >
+                      Built mobile applications with 4 months of experience. Skilled in Ionic, Xamarin, C#, HTML, CSS,
+                      Flutter, Tailwind CSS
+                    </small>
+                  </p>
+                  <p class="fs-6 fw-lighter mt-4">
+                    <small class="fs-6" >
+                      Built mobile applications with 8 months of experience. Skilled in Ionic, Xamarin, C#, HTML, CSS,
+                      Flutter, Tailwind CSS
+                    </small>
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-
+    <div class="major">
+      <div class="container">
+        <div class="card border-0 py-5">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Consectetur cum in assumenda molestiae nostrum vitae, voluptate labore esse nam iusto ut impedit ad, velit eos
+          consectetur vitae. Quasi labore ipsam nostrum, quas architecto eligendi ullam pariatur nemo adipisci minus,
+          tempore quo amet! Quis mollitia consequuntur provident? Voluptatum, amet. Sint fugit dicta quidem id nisi rerum
+          placeat excepturi cum, nulla odit minima tempora a labore. Enim nobis voluptatem minus voluptates nesciunt vero
+          aperiam dolorem commodi beatae?
+        </div>
+    </div>
+    </div>
+    <div class="major bg-second  text-white" #about>
+      <h4 class="text-center textMain pt-5 display-6 fw-bolder">About Me </h4>
+        <div class="row mt-5 ">
+          <div class="col-md-7 mt-5 pt-3" *ngIf="bio$ | async as bio">
+            <div *ngFor="let par of bio.about">
+              <p class="text-end ps-5 fs-6">{{par}}</p>
+            </div>
+          </div>
+          
+        </div>
+    </div>
+    <div class="containex">
+      <div class="row my-5 px-5 pt-5 d-flex align-items-center">
+        <h4 class="text-center  display-5 mt-5 pt-5 fw-bolder">Contact  Me </h4>
+        <div class="col-md-8  mx-auto mt-0 pt-0">
+            <p class="text-center ps-5 fs-6 mt-5">
+              If you like my work or want to hire me, please feel free to shoot me an email on
+              <b> jude.asiedu99@gmail.com</b> by pressing the button below.
+            </p>
+            <div class="text-center my-3" >
+              <button class="btn btn-dark rounded-0 mx-auto text-center px-5 py-2 fs-6 fw-bold">
+                <small>Send me an email</small>
+                <i class="fas fa-mail-bulk ms-2"></i>
+                </button>
+              </div>
+            <p class="mt-2 text-center fs-6">
+              or contact me through
+              <a href="https://linkln.com"  target="_blank" class="mx-1 text-dark">
+                LinkedIn
+              </a>
+              or
+              <a href="https://instagram"  target="_blank" class="mx-1 text-dark">
+                Instagram
+              </a>
+            </p>
+        </div>
+    </div>
+    </div>
 </div>
