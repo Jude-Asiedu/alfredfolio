@@ -20,5 +20,11 @@ export class HomeComponent implements OnInit {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
 
+
+  }
+
+  openMail(){
+    let url = "mailto:jude.asiedu99@gmail.com?Subject=Hello"
+    window.open(url)
   }
 }

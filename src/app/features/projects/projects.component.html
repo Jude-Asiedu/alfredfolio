@@ -1,1 +1,32 @@
-<p>projects works!</p>
+<div class="container">
+  <h4 class="text-center textMain my-5 display-5  pt-5 fw-bolder">My Projects </h4>
+    <ngb-carousel  class="mb-5 p-2">
+      <ng-template ngbSlide>
+        <div class="text-center">
+          <img  class="text-center" height="410px" [src]="images[0]" alt="Random latest project" />
+        </div>
+        <div class="carousel-caption">
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="text-center">
+          <img  class="text-center" height="410px"  [src]="images[1]" alt="Random latest project" />
+        </div>
+        <div class="carousel-caption">
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="text-center">
+          <img  class="text-center" height="410px"  [src]="images[2]" alt="Random project" />
+        </div>
+        <div class="carousel-caption">
+          <h3>Third slide label</h3>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+</div>

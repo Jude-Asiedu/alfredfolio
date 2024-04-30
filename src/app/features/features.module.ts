@@ -7,6 +7,7 @@ import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { BlogComponent } from './blog/blog.component';
 import { SiteSettingsComponent } from './site-settings/site-settings.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { SiteSettingsComponent } from './site-settings/site-settings.component';
   ],
   imports: [
     CommonModule,
+    NgbModule,
     FeaturesRoutingModule
   ]
 })

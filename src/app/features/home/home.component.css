@@ -3,7 +3,7 @@
 }
 
 .topClass{
-  height: 100vh;
+  /* height: 100vh; */
   scroll-snap-type: y;
   scroll-behavior:smooth;
   overflow-y:auto;
@@ -14,8 +14,8 @@
   }
 }
 .containex{
-  height: 90vh;
-  scroll-snap-align:start;
+  height: 95vh;
+  scroll-snap-align:none;
 }
 .major{
   height: 100vh;
@@ -36,4 +36,12 @@
 .textMain
 {
  color: #bae8e8;
+}
+
+.logso:hover{
+  /* transform: scaleX(-1); */
+  cursor: pointer;
+  transform: scale(1.04) rotate(1deg);
+  /* transition: all 1.5s cubic-bezier(0.43, 1, 0.320, 1); */
+  /* transform: rotateY(10deg) rotateX(10deg) scale(1.05); */
 }
