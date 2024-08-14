@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
   bio$ = this.bioService.getBio();
   isHome$ = this.headerService.isHome();
   menuItems = [
-    { title: 'About', homePath: '/about', fragment: 'about', pagePath: '/about' },
+    { title: 'About', homePath: '/about', fragment: '', pagePath: '/about' },
     { title: 'My Projects', homePath: '/projects', fragment: '', pagePath: '/projects' },
     { title: 'My Blog', homePath: '/blog', fragment: '', pagePath: '/blog' }
   ];
@@ -26,6 +26,9 @@ export class HeaderComponent implements OnInit {
   openResume(){
     window.open("assets/pdf/pdresume.pdf",'_blank')
   }
+  scrollToSection(sectionId: string): void {
+    this.headerService.scrollToSection(sectionId);
+}
 
 
 

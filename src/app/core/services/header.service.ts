@@ -32,4 +32,10 @@ export class HeaderService {
     return url.startsWith('/#') || url == '/';
   }
 
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
+}
 }

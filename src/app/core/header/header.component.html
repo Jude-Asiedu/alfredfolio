@@ -15,8 +15,7 @@
             </button>
             <div ngbDropdownMenu class="dropdown-menu fs-6 fw-light dropdown-menu">
                 <button ngbDropdownItem *ngFor="let item of menuItems"
-                [routerLink]="(isHome$ | async) ? item.homePath : item.pagePath" [fragment]="(isHome$ | async) ? item.fragment : ''"
-                >{{item.title}}</button>
+                [routerLink]="(isHome$ | async) ? item.homePath : item.pagePath" [fragment]="(isHome$ | async) ? item.fragment : ''" >{{item.title}}</button>
                 <button ngbDropdownItem (click)="openResume()">
                   Resume
                 </button>
