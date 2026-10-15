@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { FeaturesRoutingModule } from './features-routing.module';
 import { HomeComponent } from './home/home.component';
@@ -20,6 +21,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     NgbModule,
     FeaturesRoutingModule
   ]

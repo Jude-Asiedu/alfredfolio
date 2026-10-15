@@ -1,4 +1,5 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { BioService } from 'src/app/core/services/bio.service';
 
 @Component({
@@ -14,13 +15,15 @@ export class HomeComponent implements OnInit {
     { viewClasses: 'd-none d-md-flex', headingClass: 'display-1', useSmallerHeadings: false },
     { viewClasses: 'd-flex d-md-none', headingClass: '', useSmallerHeadings: true }
   ];
-  constructor(private bioService: BioService){}
+  constructor(
+    private bioService: BioService,
+    private title: Title,
+    private meta: Meta
+  ){}
 
   ngOnInit(): void {
-    console.log();
-
-
-
+    this.title.setTitle('Jude Asiedu — Senior Full-Stack Developer | Portfolio');
+    this.meta.updateTag({ name: 'description', content: 'Portfolio of Jude Asiedu (A.L.F.R.E.D), a Senior Full-Stack Developer based in Accra, Ghana. Skills, experience, projects, and contact.' });
   }
 
   openMail(){

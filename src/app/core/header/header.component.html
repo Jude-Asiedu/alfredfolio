@@ -1,28 +1,57 @@
-<div class="d-flex text-white w-100 align-items-center header justify-content-center py-2 ">
-    <div class="d-flex justify-content-start cursor-pointer " routerLink="/">
-        <h3 class="fw-light ms-4">AAJ</h3>
+<header class="site-header" [class.scrolled]="isScrolled" aria-label="Primary navigation">
+  <div class="nav-pill">
+
+    <!-- Brand -->
+    <a class="brand" routerLink="/" aria-label="AAJ — Home">
+      <span class="brand-dot" aria-hidden="true"></span>
+      <span class="brand-text">AAJ</span>
+    </a>
+
+    <span class="pill-divider d-none d-md-inline-block" aria-hidden="true"></span>
+
+    <!-- Desktop nav -->
+    <nav class="nav-desktop d-none d-md-inline-flex" aria-label="Primary">
+      <a
+        *ngFor="let item of menuItems; let i = index"
+        [routerLink]="(isHome$ | async) ? item.homePath : item.pagePath"
+        [fragment]="(isHome$ | async) ? item.fragment : ''"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: false }"
+        class="nav-link">
+        <i [class]="item.icon" aria-hidden="true"></i>
+        <span>{{ item.title }}</span>
+      </a>
+    </nav>
+
+    <span class="pill-divider d-none d-md-inline-block" aria-hidden="true"></span>
+
+    <!-- Resume CTA (desktop) -->
+    <button class="cta-resume d-none d-md-inline-flex" (click)="openResume()">
+      <span>Resume</span>
+      <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+    </button>
+
+    <!-- Mobile overflow -->
+    <div ngbDropdown class="d-md-none hide-arrow ms-auto" display="dynamic" container="body">
+      <button class="menu-toggle" ngbDropdownToggle aria-label="Open menu">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <div ngbDropdownMenu class="dropdown-menu nav-dropdown">
+        <button
+          ngbDropdownItem
+          *ngFor="let item of menuItems"
+          [routerLink]="(isHome$ | async) ? item.homePath : item.pagePath"
+          [fragment]="(isHome$ | async) ? item.fragment : ''">
+          <i [class]="item.icon + ' me-2'" aria-hidden="true"></i>
+          {{ item.title }}
+        </button>
+        <div class="dropdown-divider"></div>
+        <button ngbDropdownItem (click)="openResume()">
+          <i class="fas fa-arrow-up-right-from-square me-2" aria-hidden="true"></i>
+          Resume
+        </button>
+      </div>
     </div>
 
-    <div class="d-none d-md-flex flex-grow-1 justify-content-center align-items-start">
-        <button type="button" class="ml-2 mr-2 btn btn-outline-light btn-sm  border-0 fw-light"
-            *ngFor="let item of menuItems" [routerLink]="(isHome$ | async) ? item.homePath : item.pagePath" [fragment]="(isHome$ | async) ? item.fragment : ''"
-            >{{item.title}}</button>
-    </div>
-    <div class="d-flex d-md-none justify-content-end flex-grow-1">
-        <div ngbDropdown class="d-block hide-arrow" display="dynamic" container="body">
-            <button class="btn  border-0  dropdown-item me-3  " ngbDropdownToggle>
-                <i class="fas fa-lg  fa-ellipsis-v"></i>
-            </button>
-            <div ngbDropdownMenu class="dropdown-menu fs-6 fw-light dropdown-menu">
-                <button ngbDropdownItem *ngFor="let item of menuItems"
-                [routerLink]="(isHome$ | async) ? item.homePath : item.pagePath" [fragment]="(isHome$ | async) ? item.fragment : ''" >{{item.title}}</button>
-                <button ngbDropdownItem (click)="openResume()">
-                  Resume
-                </button>
-            </div>
-        </div>
-    </div>
-    <button class="btn btn-outline-light px-3 btn-sm  me-4 d-none d-md-flex rounded-0" (click)="openResume()">
-      Resume
-    </button>
-</div>
+  </div>
+</header>

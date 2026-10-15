@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://judeasiedu.netlify.app/sitemap.xml

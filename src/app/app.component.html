@@ -1,7 +1,7 @@
-<app-header></app-header>
-<div class="container-fluid m-0 p-0 h-100 ">
-  <router-outlet></router-outlet>
-</div>
-<div>
+<div class="app-shell d-flex flex-column min-vh-100">
+  <app-header></app-header>
+  <main id="main" class="container-fluid m-0 p-0 flex-grow-1">
+    <router-outlet></router-outlet>
+  </main>
   <app-footer></app-footer>
 </div>
