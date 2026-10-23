@@ -1,23 +1,104 @@
 /* You can add global styles to this file, and also import other style files */
-.cursor-pointer{
+
+:root {
+  --surface-0: #0b1220;
+  --surface-1: #111827;
+  --surface-2: #1a1f2e;
+  --text-main: #e5e7eb;
+  --text-dim:  rgba(229, 231, 235, 0.72);
+  --teal:      #5eead4;
+  --teal-soft: #bae8e8;
+}
+
+html, body {
+  background-color: var(--surface-0);
+  color: var(--text-main);
+}
+
+.cursor-pointer {
   cursor: pointer;
 }
-.bg-second{
-  background-color:#272643 ;
+
+/* Section surfaces */
+.bg-tertiary {
+  background:
+    radial-gradient(ellipse 60% 40% at 50% 30%, rgba(94, 234, 212, 0.14), transparent 70%),
+    linear-gradient(180deg, var(--surface-0) 0%, var(--surface-1) 100%);
+  color: var(--text-main);
 }
-.bg-tertiary{
-  background-color: #ffffff;
+
+.bg-second {
+  background-color: var(--surface-1);
+  color: var(--text-main);
 }
-.card-hover{
+
+.surface-deep {
+  background-color: var(--surface-0);
+  color: var(--text-main);
+}
+
+.surface-light {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+.surface-black {
+  background-color: #030712;
+  color: var(--text-main);
+}
+
+/* Hairline separator between dark sections */
+.section-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Card hover (unchanged behavior) */
+.card-hover {
   transition: all 0.25s ease;
 }
 
-.card-hover:hover{
+.card-hover:hover {
   background-color: #333159a8;
-  border-color: rgba(34, 139, 174, 0.442) ;
+  border-color: rgba(34, 139, 174, 0.442);
   box-shadow: 0 14px 24px rgba(0, 0, 0, 0.2);
 }
-.textMain{
- color: #bae8e8;
 
+.textMain {
+  color: var(--teal-soft);
+}
+
+/* Teal gradient CTA — reusable on dark surfaces */
+.btn-teal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.6rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #5eead4 0%, #a5f3fc 100%);
+  color: #0b1220;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  box-shadow: 0 8px 20px -8px rgba(94, 234, 212, 0.55);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.btn-teal:hover {
+  color: #0b1220;
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px -8px rgba(94, 234, 212, 0.7);
+  filter: brightness(1.05);
+}
+
+.btn-teal:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-hover,
+  .btn-teal {
+    transition: none;
+  }
 }

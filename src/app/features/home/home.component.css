@@ -1,47 +1,490 @@
-.min-vh-95 {
-    height: 95vh;
+/* ============================================================
+   Layout
+   ============================================================ */
+.topClass {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-.topClass{
-  /* height: 100vh; */
-  scroll-snap-type: y;
-  scroll-behavior:smooth;
-  overflow-y:auto;
-  overflow-x:hidden;
-  scrollbar-width: none;
-  &::-webkit-scrollbar{
-    display:none;
+/* Hero keeps its forced height for impact */
+.containex {
+  min-height: 95vh;
+}
+
+/* Section wrapper replaces the old .major (no more forced 100vh) */
+.section {
+  padding: 6rem 0 5rem;
+}
+
+/* Keep legacy classes behaving, but no forced heights */
+.major {
+  padding: 4rem 0;
+}
+.professional {
+  padding: 4rem 0;
+}
+
+.textMain { color: #bae8e8; }
+
+/* ============================================================
+   Section typography
+   ============================================================ */
+.section-eyebrow {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  text-align: center;
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.01em;
+  margin: 0 0 0.75rem;
+}
+
+.section-sub {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 540px;
+  margin: 0 auto 3rem;
+  font-size: 1rem;
+}
+
+/* ============================================================
+   Bento grid — Skills
+   ============================================================ */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .bento {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
   }
-}
-.containex{
-  height: 95vh;
-  scroll-snap-align:none;
-}
-.major{
-  height: 100vh;
-  scroll-snap-align:none;
+  .bento-wide { grid-column: span 2; grid-row: span 2; }
+  .bento-cta  { grid-column: span 2; }
 }
 
-.skillCard{
-  background-color: #333159a8;
-  padding: 10px;
-}
-.professional{
-  min-height: 100vh;
-  scroll-snap-align:center;
-
-}
-
-
-.textMain
-{
- color: #bae8e8;
+.bento-card {
+  position: relative;
+  overflow: hidden;
+  padding: 1.75rem;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(94, 234, 212, 0.04), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #fff;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  isolation: isolate;
 }
 
-.logso:hover{
-  /* transform: scaleX(-1); */
+/* Animated gradient border on hover using masked ::before */
+.bento-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: conic-gradient(from 180deg at 50% 50%,
+    rgba(94, 234, 212, 0) 0%,
+    rgba(94, 234, 212, 0.8) 25%,
+    rgba(165, 243, 252, 0.6) 50%,
+    rgba(94, 234, 212, 0) 75%);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.5);
+}
+
+.bento-card:hover::before { opacity: 1; }
+
+.bento-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(94, 234, 212, 0.12);
+  color: #5eead4;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.bento-card:hover .bento-icon { transform: rotate(-6deg) scale(1.08); }
+
+.bento-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+
+.bento-wide .bento-title { font-size: 1.6rem; }
+
+.bento-text {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin: 0 0 1rem;
+}
+
+.bento-stat {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  text-align: right;
+  line-height: 1;
+}
+
+.bento-stat-num {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #5eead4;
+  letter-spacing: -0.02em;
+}
+
+.bento-stat-label {
+  display: block;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 0.25rem;
+}
+
+/* CTA card — teal glow */
+.bento-cta {
+  background: linear-gradient(135deg, rgba(94, 234, 212, 0.1), rgba(165, 243, 252, 0.04));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.bento-glow {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(94, 234, 212, 0.35), transparent 70%);
+  top: -40px;
+  right: -40px;
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+/* Chips (reusable) */
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* ============================================================
+   Marquee — tech strip
+   ============================================================ */
+.marquee {
+  margin-top: 3.5rem;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+
+.marquee-track {
+  display: inline-flex;
+  gap: 2.5rem;
+  white-space: nowrap;
+  animation: marquee 32s linear infinite;
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.marquee-item i {
+  color: #5eead4;
+  font-size: 1.2rem;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ============================================================
+   Vertical timeline — Experience
+   ============================================================ */
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  max-width: 820px;
+  margin-inline: auto;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 2px;
+  background: linear-gradient(180deg,
+    transparent 0%,
+    rgba(94, 234, 212, 0.4) 10%,
+    rgba(94, 234, 212, 0.4) 90%,
+    transparent 100%);
+}
+
+@media (min-width: 768px) {
+  .timeline::before { left: 50%; transform: translateX(-50%); }
+}
+
+.timeline-entry {
+  position: relative;
+  padding-left: 56px;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .timeline-entry { padding-left: 0; width: 50%; }
+  .timeline-entry:nth-child(odd)  { padding-right: 3rem; text-align: right; margin-left: 0; }
+  .timeline-entry:nth-child(even) { padding-left: 3rem; margin-left: 50%; }
+}
+
+.timeline-node {
+  position: absolute;
+  left: 11px;
+  top: 1.2rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #5eead4;
+  box-shadow: 0 0 0 4px rgba(94, 234, 212, 0.18), 0 0 20px rgba(94, 234, 212, 0.6);
+}
+
+@media (min-width: 768px) {
+  .timeline-entry:nth-child(odd)  .timeline-node { left: auto; right: -10px; }
+  .timeline-entry:nth-child(even) .timeline-node { left: -10px; }
+}
+
+.timeline-card {
+  padding: 1.5rem 1.75rem;
+  background: rgba(17, 24, 39, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(94, 234, 212, 0.3);
+  box-shadow: 0 20px 40px -20px rgba(94, 234, 212, 0.3);
+}
+
+.timeline-period {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(94, 234, 212, 0.08);
+  border: 1px solid rgba(94, 234, 212, 0.18);
+  color: #bae8e8;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.9rem;
+}
+
+.period-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5eead4;
+  box-shadow: 0 0 8px #5eead4;
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.5; transform: scale(1.2); }
+}
+
+.timeline-role {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+  color: #fff;
+}
+
+.timeline-company {
+  display: inline-flex;
+  align-items: center;
+  color: #5eead4;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.timeline-company:hover { color: #a5f3fc; }
+
+.timeline-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.timeline-bullets li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.timeline-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5eead4;
+}
+
+@media (min-width: 768px) {
+  .timeline-entry:nth-child(odd) .timeline-bullets li { padding-left: 0; padding-right: 1.1rem; }
+  .timeline-entry:nth-child(odd) .timeline-bullets li::before { left: auto; right: 0; }
+}
+
+/* ============================================================
+   Legacy card
+   ============================================================ */
+.skillCard { background: rgba(255, 255, 255, 0.03); padding: 10px; }
+.logso:hover {
   cursor: pointer;
   transform: scale(1.04) rotate(1deg);
-  /* transition: all 1.5s cubic-bezier(0.43, 1, 0.320, 1); */
-  /* transform: rotateY(10deg) rotateX(10deg) scale(1.05); */
+}
+
+/* ============================================================
+   Light theme — Skills section + Projects carousel
+   ============================================================ */
+.theme-light .section-eyebrow { color: rgba(15, 23, 42, 0.5); }
+.theme-light .section-title   { color: #0f172a; }
+.theme-light .section-sub     { color: rgba(15, 23, 42, 0.65); }
+.theme-light .textMain        { color: #0f766e; }
+
+.theme-light .bento-card {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  color: #0f172a;
+  box-shadow: 0 4px 16px -8px rgba(15, 23, 42, 0.12);
+}
+
+.theme-light .bento-card:hover {
+  box-shadow: 0 24px 48px -24px rgba(15, 23, 42, 0.25);
+}
+
+.theme-light .bento-text    { color: rgba(15, 23, 42, 0.68); }
+.theme-light .bento-icon    { background: rgba(13, 148, 136, 0.1); color: #0f766e; }
+.theme-light .bento-stat-num   { color: #0f766e; }
+.theme-light .bento-stat-label { color: rgba(15, 23, 42, 0.55); }
+
+.theme-light .bento-cta {
+  background: linear-gradient(135deg, #ecfeff 0%, #f0fdfa 100%);
+  border-color: rgba(13, 148, 136, 0.2);
+}
+
+.theme-light .chip {
+  background: rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  color: rgba(15, 23, 42, 0.75);
+}
+
+.theme-light .marquee-item   { color: rgba(15, 23, 42, 0.6); }
+.theme-light .marquee-item i { color: #0f766e; }
+
+/* Marquee edge fade needs a light base */
+.theme-light .marquee {
+  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+
+/* ============================================================
+   Dark theme — Experience on pure black (slight tweaks)
+   ============================================================ */
+.theme-dark .timeline-card {
+  background: rgba(10, 15, 25, 0.72);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.theme-dark .timeline-node {
+  box-shadow:
+    0 0 0 4px rgba(94, 234, 212, 0.14),
+    0 0 24px rgba(94, 234, 212, 0.75);
+}
+
+.theme-dark .timeline::before {
+  background: linear-gradient(180deg,
+    transparent 0%,
+    rgba(94, 234, 212, 0.5) 10%,
+    rgba(94, 234, 212, 0.5) 90%,
+    transparent 100%);
+}
+
+/* ============================================================
+   Reduced motion
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+  .period-dot    { animation: none; }
+  .bento-card,
+  .bento-card::before,
+  .bento-icon,
+  .timeline-card { transition: none; }
 }

@@ -1,13 +1,17 @@
 <!-- Carousel variant (used inside Home) -->
 <div class="container" *ngIf="variant === 'carousel'">
-  <h4 class="text-center textMain my-5 display-5 pt-5 fw-bolder">My Projects</h4>
-  <ngb-carousel class="mb-5 p-2" *ngIf="projects$ | async as projects">
+  <div class="section-eyebrow projects-eyebrow">A look at the work</div>
+  <h2 class="section-title projects-title">My Projects</h2>
+
+  <ngb-carousel class="projects-carousel mb-5" *ngIf="projects$ | async as projects">
     <ng-template ngbSlide *ngFor="let project of projects">
-      <div class="carousel-slide text-center">
-        <img class="carousel-img" [src]="project.imageUrl" [alt]="project.name" />
-      </div>
-      <div class="carousel-caption carousel-caption-min">
-        <h5 class="mb-0">{{ project.name }}</h5>
+      <div class="carousel-slide">
+        <img
+          class="carousel-img"
+          [src]="screenshotUrl(project.previewUrl)"
+          [alt]="project.name + ' — live site screenshot'"
+          loading="lazy"
+          (error)="onPreviewError($event, project)" />
       </div>
     </ng-template>
   </ngb-carousel>
