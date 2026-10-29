@@ -2,10 +2,19 @@
 .projects-title {
   color: #272643;
   text-align: center;
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.01em;
+  margin: 0 0 0.75rem;
 }
 
 .projects-eyebrow {
   color: rgba(39, 38, 67, 0.55);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.72rem;
+  margin-bottom: 0.75rem;
 }
 
 /* Projects carousel on the Home page */
