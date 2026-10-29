@@ -2,15 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>AAJ</title>
+  <title>Jude Asiedu — Senior Full-Stack Developer | Portfolio</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="description" content="Portfolio of Jude Asiedu (A.L.F.R.E.D), a Senior Full-Stack Developer based in Accra, Ghana. Building fast, accessible, and beautiful websites.">
+  <meta name="author" content="Jude Asiedu">
+  <meta name="theme-color" content="#272643">
+
+  <link rel="canonical" href="https://judeasiedu.netlify.app/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Alfredfolio">
+  <meta property="og:title" content="Jude Asiedu — Senior Full-Stack Developer">
+  <meta property="og:description" content="Portfolio of Jude Asiedu (A.L.F.R.E.D), a Senior Full-Stack Developer based in Accra, Ghana.">
+  <meta property="og:url" content="https://judeasiedu.netlify.app/">
+  <meta property="og:image" content="https://judeasiedu.netlify.app/assets/img/profilelogo.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jude Asiedu — Senior Full-Stack Developer">
+  <meta name="twitter:description" content="Portfolio of Jude Asiedu (A.L.F.R.E.D), Senior Full-Stack Developer based in Accra, Ghana.">
+  <meta name="twitter:image" content="https://judeasiedu.netlify.app/assets/img/profilelogo.jpg">
+
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+  <link rel="apple-touch-icon" href="assets/img/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;800&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD: Person schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jude Asiedu",
+    "alternateName": "A.L.F.R.E.D",
+    "jobTitle": "Senior Full-Stack Developer",
+    "url": "https://judeasiedu.netlify.app/",
+    "image": "https://judeasiedu.netlify.app/assets/img/profilelogo.jpg",
+    "email": "mailto:jude.asiedu99@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Accra",
+      "addressCountry": "GH"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/jude-asiedu-231b9b144/",
+      "https://github.com/Jude-Asiedu"
+    ]
+  }
+  </script>
 </head>
 <body>
+  <!-- Hidden form registered at build time so Netlify's post-processor detects it.
+       The real, user-facing form lives in src/app/features/about/about.component.html. -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <textarea name="message"></textarea>
+    <input type="text" name="bot-field" />
+  </form>
   <app-root></app-root>
 </body>
 </html>

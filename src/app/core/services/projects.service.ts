@@ -5,6 +5,8 @@ import { Observable, mergeAll, filter, toArray } from 'rxjs';
 
 export interface Project {
   name: string;
+  period: string;
+  imageUrl: string;
   stack: { iconClasses: string, name: string };
   description: string;
   sourceUrl: string;

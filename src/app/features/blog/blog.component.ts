@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-blog',
@@ -9,14 +10,11 @@ export class BlogComponent  implements OnInit{
 
   blogPost:any[]=[]
 
-  constructor(){
-
-  }
+  constructor(private title: Title, private meta: Meta){}
 
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
-
+    this.title.setTitle('Blog — Jude Asiedu');
+    this.meta.updateTag({ name: 'description', content: 'Writing and notes by Jude Asiedu on web development, Angular, and the craft of building for the web.' });
   }
 
 }

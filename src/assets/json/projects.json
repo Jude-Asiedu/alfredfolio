@@ -1,46 +1,93 @@
 [
     {
-        "name": "Soduko",
+        "name": "Idea Deck",
+        "period": "Jun 2026",
+        "imageUrl": "assets/img/23.JPEG",
         "stack": {
-            "name": "Angular",
-            "iconClasses": "fab fa-angular"
+            "name": "Vue",
+            "iconClasses": "fab fa-vuejs"
         },
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "sourceUrl": "https://github.com",
-        "previewUrl": "https://github.com",
+        "description": "",
+        "sourceUrl": "https://ideadeck-beta.vercel.app/",
+        "previewUrl": "https://ideadeck-beta.vercel.app/",
         "featured": true
     },
     {
-        "name": "E-commerce Store",
+        "name": "Gwaipro",
+        "period": "Jul 2026",
+        "imageUrl": "assets/img/39.JPEG",
         "stack": {
-            "name": "React",
-            "iconClasses": "fab fa-react"
+            "name": "Web",
+            "iconClasses": "fas fa-code"
         },
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "sourceUrl": "https://github.com",
-        "previewUrl": "https://github.com",
+        "description": "",
+        "sourceUrl": "https://gwaipro-website.onrender.com",
+        "previewUrl": "https://gwaipro-website.onrender.com",
         "featured": true
     },
     {
-        "name": "Algorithm Visualization App",
+        "name": "Blip",
+        "period": "May 2026",
+        "imageUrl": "assets/img/41.JPEG",
         "stack": {
-            "name": "Angular",
-            "iconClasses": "fab fa-angular"
+            "name": "Web",
+            "iconClasses": "fas fa-code"
         },
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "sourceUrl": "https://github.com",
-        "previewUrl": "https://github.com",
+        "description": "",
+        "sourceUrl": "https://blip-libw.onrender.com",
+        "previewUrl": "https://blip-libw.onrender.com",
         "featured": true
     },
     {
-        "name": "Time Tracking CLI App",
+        "name": "Sonic Control",
+        "period": "Mar 2025",
+        "imageUrl": "assets/img/23.JPEG",
         "stack": {
-            "name": "Node.js",
-            "iconClasses": "fab fa-node-js"
+            "name": "Web",
+            "iconClasses": "fas fa-code"
         },
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "sourceUrl": "https://github.com",
-        "previewUrl": "https://github.com",
+        "description": "",
+        "sourceUrl": "https://soniccontrol.onrender.com/",
+        "previewUrl": "https://soniccontrol.onrender.com/",
+        "featured": true
+    },
+    {
+        "name": "FDAG",
+        "period": "Dec 2024",
+        "imageUrl": "assets/img/39.JPEG",
+        "stack": {
+            "name": "Web",
+            "iconClasses": "fas fa-code"
+        },
+        "description": "",
+        "sourceUrl": "https://civilsocietygh.onrender.com/home",
+        "previewUrl": "https://civilsocietygh.onrender.com/home",
+        "featured": true
+    },
+    {
+        "name": "Rotract Ghana",
+        "period": "Aug 2024",
+        "imageUrl": "assets/img/41.JPEG",
+        "stack": {
+            "name": "Web",
+            "iconClasses": "fas fa-code"
+        },
+        "description": "",
+        "sourceUrl": "https://rotractdev.onrender.com/",
+        "previewUrl": "https://rotractdev.onrender.com/",
+        "featured": true
+    },
+    {
+        "name": "Alfred 3JS",
+        "period": "Jan 2024",
+        "imageUrl": "assets/img/23.JPEG",
+        "stack": {
+            "name": "Three.js",
+            "iconClasses": "fas fa-cube"
+        },
+        "description": "",
+        "sourceUrl": "https://alfred-site.onrender.com/",
+        "previewUrl": "https://alfred-site.onrender.com/",
         "featured": true
     }
 ]
